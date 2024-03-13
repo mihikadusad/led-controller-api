@@ -151,3 +151,7 @@ def dot_count(value):
 def sec_count(value):
     """configure the number of sections in the display"""
     return frame(CMD_SEC_COUNT, value.to_bytes(2, 'little'))
+
+def rgb_ordering(value):
+    """configure the rgb ordering [0-5]. Untested."""
+    return _call1(CMD_SET_RGB_SEQ, value)
